@@ -1,0 +1,42 @@
+<div class="centered-container">
+  <h1 class="pixel">Créer un nouvel event</h1>
+  <div class="event-card ">
+<%= form_tag events_path(action: 'create'),  method: "post" do %>
+<div class="form-field">
+  <%= label_tag :titre %>
+  <%= text_field_tag :title%>
+</div>
+
+<div class="form-field">
+  <%= label_tag :description %>
+  <%= text_area_tag :description%>
+</div>
+
+<div class="form-field">
+  <%= label_tag :date %>
+  <%= date_field_tag :start_date%>
+</div>
+
+<div class="form-field">
+  <%= label_tag :durée %>
+  <%= select_tag :duration, options_for_select(1..24)%>
+</div>
+
+<div class="form-field">
+  <%= label_tag :localisation %>
+  <%= text_field_tag :location%>
+</div>
+
+<div class="form-field">
+  <%= label_tag :prix %>
+  <%= text_field_tag :price%>
+</div>
+
+<div class="form-field">
+  <%= submit_tag 'Valider' %>
+<div>
+
+  
+<%end%>
+</div>
+</div>
